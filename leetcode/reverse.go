@@ -4,6 +4,7 @@ package leetcode
 
 import (
 	"fmt"
+	// "unsafe"
 	"strings"
 	"unicode/utf8"
 )
@@ -38,4 +39,14 @@ func reverseWords(s string) string {
 		fmt.Printf("%d %d %d\n", i, len(w), len(bs))
 	}
 	return string(bs)
+}
+
+func loc(i, j, v byte) string {
+	var x, y byte
+	x, y = (i+3)/3, (j+3)/3
+	a := string(x*y + 10 + v)
+	// a := (*string)(unsafe.Pointer(&[]byte{x*y, v}))
+	// fmt.Printf(*a)
+	fmt.Printf("%d %d %d %v xxx", x, y, v, a)
+	return a
 }

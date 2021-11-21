@@ -117,3 +117,23 @@ func generate(numRows int) [][]int {
 	}
 	return tr
 }
+
+// 242. 有效的字母异位词 https://leetcode-cn.com/problems/valid-anagram/
+func isAnagram(s string, t string) bool {
+	m, n := len(s), len(t)
+	if m != n {
+		return false
+	}
+
+	bs := [26]int{}
+	for i := 0; i < m; i++ {
+		bs[s[i]-'a'] = bs[s[i]-'a'] + 1
+		bs[t[i]-'a'] = bs[t[i]-'a'] - 1
+	}
+	for i := 0; i < m; i++ {
+		if bs[s[i]-'a'] != 0 || bs[t[i]-'a'] != 0 {
+			return false
+		}
+	}
+	return true
+}

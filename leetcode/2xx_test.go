@@ -106,3 +106,22 @@ func TestGenerate(t *testing.T) {
 		})
 	}
 }
+
+var isAnagramCase = []struct {
+	in1, in2 string
+	want     bool
+}{
+	{"anagram", "nagaram", true},
+	{"rat", "cat", false},
+}
+
+func TestIsAnagram(t *testing.T) {
+	for idx, test := range isAnagramCase {
+		t.Run(strconv.Itoa(idx), func(t *testing.T) {
+			got := isAnagram(test.in1, test.in2)
+			if !reflect.DeepEqual(got, test.want) {
+				t.Fatalf("失败！got:%#v want:%#v\n", got, test.want)
+			}
+		})
+	}
+}
