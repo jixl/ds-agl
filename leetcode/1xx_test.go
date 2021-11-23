@@ -16,7 +16,7 @@ var connectCase = []struct{ in1, want []int }{
 func Testconnect(t *testing.T) {
 	for idx, test := range connectCase {
 		t.Run(strconv.Itoa(idx), func(t *testing.T) {
-			got := connect(test.in1)
+			got := connect(NewTree(test.in1))
 			if !reflect.DeepEqual(got, test.want) {
 				t.Fatalf("失败！got:%#v want:%#v\n", got, test.want)
 			}

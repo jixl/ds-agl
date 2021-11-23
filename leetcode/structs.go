@@ -27,3 +27,20 @@ func (list *ListNode) toArray() []int {
 	}
 	return arr
 }
+
+type TreeNode struct {
+	Val               int
+	Left, Right, Next *TreeNode
+}
+
+func NewTree(data []int) *TreeNode {
+	var root, left, right *TreeNode
+	for i, v := range data {
+		if i == 0 {
+			root = &TreeNode{Val: v, Left: left, Right: right}
+		} else {
+
+		}
+	}
+	return root
+}

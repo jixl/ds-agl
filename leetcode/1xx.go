@@ -3,12 +3,12 @@ package leetcode
 // import "fmt"
 
 // 116. 填充每个节点的下一个右侧节点指针 https://leetcode-cn.com/problems/populating-next-right-pointers-in-each-node
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-	Next  *TreeNode
-}
+// type TreeNode struct {
+// 	Val   int
+// 	Left  *TreeNode
+// 	Right *TreeNode
+// 	Next  *TreeNode
+// }
 
 func connect(root *TreeNode) *TreeNode {
 	if root == nil {

@@ -11,10 +11,6 @@ import (
 // 输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
 // 输出：6
 // 解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
-type sortedSquaresCase struct {
-	inputs []int
-	want   []int
-}
 
 var sortedSquaresGroup = []struct{ inputs, want []int }{
 	{[]int{-4, -1, 0, 3, 10}, []int{0, 1, 9, 16, 100}},
